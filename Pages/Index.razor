@@ -1,9 +1,65 @@
 ﻿@page "/"
+@using Models
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Blazor crud</PageTitle>
 
 <h1>Hello, world!</h1>
 
-Welcome to your new app.
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Genre</th>
+        <th>Price</th>
+        <th>Release date</th>
+    </thead>
+    <tbody>
+        @foreach(var game in games)
+        {
+            <tr>
+                <td>@game.Id</td>
+                <td>@game.Name</td>
+                <td>@game.Genre</td>
+                <td>@game.Price</td>
+                <td>@game.ReleaseDate.ToString("MM/dd/yyyy")</td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+
+    private Game[] games = new[]
+    {
+        new Game()
+        {
+            Id = 1,
+            Name = "FirstGame",
+            Genre = "FirstGenre",
+            Price = 19.99M,
+            ReleaseDate = new DateTime(2013, 2, 1)
+        },
+        
+        new Game()
+        {
+            Id = 2,
+            Name = "SecondGame",
+            Genre = "SecondGenre",
+            Price = 19.99M,
+            ReleaseDate = new DateTime(1996, 2, 1)
+        },
+        
+        new Game()
+        {
+            Id = 2,
+            Name = "ThirdGame",
+            Genre = "ThirdGenre",
+            Price = 29.99M,
+            ReleaseDate = new DateTime(1998, 2, 1)
+        },
+
+    };
+}
 
 

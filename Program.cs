@@ -1,4 +1,4 @@
-using blazor_gamestore_crud;
+using blazorgamestorecrud;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 

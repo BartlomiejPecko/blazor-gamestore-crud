@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blazor-gamestore-crud", "blazor-gamestore-crud.csproj", "{B17C4200-9137-4B72-A17F-11F37118CE33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blazorgamestorecrud", "blazorgamestorecrud.csproj", "{B17C4200-9137-4B72-A17F-11F37118CE33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
