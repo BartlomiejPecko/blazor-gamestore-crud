@@ -3,9 +3,18 @@
 @using blazorgamestorecrud.Models;
 @inject NavigationManager NavigationManager
 
-<PageTitle>New Game</PageTitle>
+<PageTitle>@title</PageTitle>
 <h1>Game Catalog</h1>
-<h3>New Game</h3>
+<h3>@title</h3>
+
+
+@if (game is null)
+{
+    <p><em>Loading...</em></p>
+}
+
+else
+{
 
 <div class="row">
     <div class="col-sm-4">
@@ -36,7 +45,7 @@
         </EditForm>
     </div>
 </div>
-
+}
 
 @code {
 
@@ -44,6 +53,8 @@
     public int? Id { get; set; }
 
     private Game? game;
+
+    private string title = string.Empty;
 
     protected override void OnParametersSet()
     {
@@ -58,6 +69,8 @@
                     Price = foundGame.Price,
                     ReleaseDate = foundGame.ReleaseDate
                 };
+
+            title = $"Edit {game.Name}";
         }
         else
         {
@@ -67,6 +80,8 @@
                 Genre = string.Empty,
                 ReleaseDate = DateTime.UtcNow
             };
+
+            title = "New game";
         }
     }
 
