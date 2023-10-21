@@ -39,4 +39,10 @@ public static class GameClient
     {
         return games.ToArray();
     }
+
+    public static void AddGame(Game game) //method to add games
+    {
+        games.Add(game);
+    }
+
 }
